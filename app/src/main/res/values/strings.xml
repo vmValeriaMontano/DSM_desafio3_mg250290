@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AprendeApp</string>
     <string name="welcome_message">¡Bienvenido a AprendeApp!</string>
+    <string name="pass_error_longitud" />
 </resources>
