@@ -64,4 +64,10 @@ dependencies {
     // deslizar hacia abajo para actualizar la pantalla
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
+    // ciclo de vida del componente
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
+
+    // hilos en segundo plano para tareas asíncronas (como peticiones de red)
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+
 }
