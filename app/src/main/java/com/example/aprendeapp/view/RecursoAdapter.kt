@@ -1,17 +1,24 @@
 package com.example.aprendeapp.view
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.aprendeapp.R
 import com.example.aprendeapp.databinding.ItemRecursoBinding
 import com.example.aprendeapp.model.Recurso
-import com.example.aprendeapp.R
 
 class RecursoAdapter(
-    private val onAbrirEnlace: (Recurso) -> Unit
+    private val esDocente: Boolean,
+    private val esFavorito: (Recurso) -> Boolean,
+    private val onAbrirEnlace: (Recurso) -> Unit,
+    private val onFavorito: (Recurso) -> Unit,
+    private val onCalificar: (Recurso) -> Unit,
+    private val onEditar: (Recurso) -> Unit,
+    private val onEliminar: (Recurso) -> Unit
 ) : ListAdapter<Recurso, RecursoAdapter.VH>(Diff) {
 
     object Diff : DiffUtil.ItemCallback<Recurso>() {
@@ -43,7 +50,22 @@ class RecursoAdapter(
                 .centerCrop()
                 .into(ivImagen)
 
+            // Estudiante: favorito y calificar. Docente: editar y eliminar.
+            btnFavorito.visibility = if (esDocente) View.GONE else View.VISIBLE
+            btnCalificar.visibility = if (esDocente) View.GONE else View.VISIBLE
+            btnEditar.visibility = if (esDocente) View.VISIBLE else View.GONE
+            btnEliminar.visibility = if (esDocente) View.VISIBLE else View.GONE
+
+            btnFavorito.setImageResource(
+                if (esFavorito(r)) android.R.drawable.btn_star_big_on
+                else android.R.drawable.btn_star_big_off
+            )
+
             btnAbrir.setOnClickListener { onAbrirEnlace(r) }
+            btnFavorito.setOnClickListener { onFavorito(r) }
+            btnCalificar.setOnClickListener { onCalificar(r) }
+            btnEditar.setOnClickListener { onEditar(r) }
+            btnEliminar.setOnClickListener { onEliminar(r) }
         }
     }
 }

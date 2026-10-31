@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AprendeApp">
         <activity
+            android:name=".view.FormRecursoActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.RecursoAdapter"
             android:exported="false" />
         <activity

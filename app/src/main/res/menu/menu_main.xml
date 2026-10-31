@@ -2,6 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/action_agregar"
+        android:title="@string/menu_agregar"
+        android:icon="@android:drawable/ic_input_add"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_favoritos"
+        android:title="@string/menu_favoritos"
+        android:icon="@android:drawable/btn_star_big_off"
+        android:checkable="true"
+        app:showAsAction="ifRoom" />
+    <item
         android:id="@+id/action_logout"
         android:title="@string/menu_logout"
         app:showAsAction="never" />

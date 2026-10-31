@@ -57,4 +57,44 @@
     <string name="btn_si">Sí</string>
     <string name="btn_cancelar">Cancelar</string>
     <string name="msg_sesion_cerrada">Sesión cerrada</string>
+
+    <!-- Menú -->
+    <string name="menu_agregar">Agregar recurso</string>
+    <string name="menu_favoritos">Mis favoritos</string>
+
+    <!-- Formulario docente -->
+    <string name="titulo_nuevo_recurso">Nuevo recurso</string>
+    <string name="titulo_editar_recurso">Editar recurso</string>
+    <string name="hint_titulo">Título</string>
+    <string name="hint_descripcion">Descripción</string>
+    <string name="hint_tipo">Tipo (libro, video, artículo…)</string>
+    <string name="hint_enlace">Enlace (https://…)</string>
+    <string name="hint_imagen">URL de la imagen</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="btn_editar">Editar</string>
+    <string name="btn_eliminar">Eliminar</string>
+    <string name="btn_calificar">Calificar</string>
+    <string name="btn_enviar">Enviar</string>
+    <string name="error_titulo">El título debe tener al menos 3 caracteres</string>
+    <string name="error_descripcion">La descripción debe tener al menos 10 caracteres</string>
+    <string name="error_tipo">Indica el tipo de recurso</string>
+    <string name="error_enlace">Ingresa un enlace válido (http:// o https://)</string>
+    <string name="error_imagen">Ingresa una URL de imagen válida (http:// o https://)</string>
+
+    <!-- Mensajes -->
+    <string name="msg_recurso_creado">Recurso creado</string>
+    <string name="msg_recurso_actualizado">Recurso actualizado</string>
+    <string name="msg_recurso_eliminado">Recurso eliminado</string>
+    <string name="msg_elige_estrellas">Selecciona al menos una estrella</string>
+    <string name="msg_gracias_calificar">¡Gracias por calificar!</string>
+    <string name="msg_favorito_agregado">Agregado a favoritos</string>
+    <string name="msg_favorito_quitado">Quitado de favoritos</string>
+
+    <!-- Diálogos -->
+    <string name="dialog_eliminar_titulo">Eliminar recurso</string>
+    <string name="dialog_eliminar_mensaje">¿Eliminar \"%1$s\"? Esta acción no se puede deshacer.</string>
+    <string name="dialog_calificar_titulo">Califica este recurso</string>
+
+    <!-- Accesibilidad -->
+    <string name="item_favorito_desc">Marcar como favorito</string>
 </resources>
