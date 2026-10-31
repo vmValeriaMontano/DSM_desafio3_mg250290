@@ -110,8 +110,7 @@
                     style="?attr/borderlessButtonStyle"
                     android:layout_width="@dimen/icon_button_size"
                     android:layout_height="@dimen/icon_button_size"
-                    android:contentDescription="@string/item_favorito_desc"
-                    app:tint="@color/primary" />
+                    android:contentDescription="@string/item_favorito_desc" />
 
             </LinearLayout>
 

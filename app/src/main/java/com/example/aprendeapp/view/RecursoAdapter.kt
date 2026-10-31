@@ -56,10 +56,14 @@ class RecursoAdapter(
             btnEditar.visibility = if (esDocente) View.VISIBLE else View.GONE
             btnEliminar.visibility = if (esDocente) View.VISIBLE else View.GONE
 
-            btnFavorito.setImageResource(
-                if (esFavorito(r)) android.R.drawable.btn_star_big_on
-                else android.R.drawable.btn_star_big_off
-            )
+            // Cambio dinámico de estado y color para favoritos
+            if (esFavorito(r)) {
+                btnFavorito.setImageResource(android.R.drawable.btn_star_big_on)
+                btnFavorito.setColorFilter(ctx.getColor(R.color.flor_cerezo)) // Color activo (rosa/flor de cerezo)
+            } else {
+                btnFavorito.setImageResource(android.R.drawable.btn_star_big_off)
+                btnFavorito.setColorFilter(ctx.getColor(R.color.malva_empolvado)) // Color inactivo (malva suave)
+            }
 
             btnAbrir.setOnClickListener { onAbrirEnlace(r) }
             btnFavorito.setOnClickListener { onFavorito(r) }
