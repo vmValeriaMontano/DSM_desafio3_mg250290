@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opciones_orden">
+        <item>@string/orden_titulo_asc</item>
+        <item>@string/orden_titulo_desc</item>
+        <item>@string/orden_mejor_calificados</item>
+    </string-array>
+</resources>

@@ -37,6 +37,24 @@
     <string name="error_generico">Ocurrió un error. Intenta de nuevo</string>
     <string name="msg_registro_exitoso">Cuenta creada. Ya puedes iniciar sesión</string>
 
-    <!-- Main (temporal) -->
-    <string name="main_rol">Rol: %1$s</string>
+    <!-- Main / Lista -->
+    <string name="hint_buscar">Buscar por ID, título o tipo</string>
+    <string name="hint_ordenar">Ordenar por</string>
+    <string name="chip_todos">Todos</string>
+    <string name="orden_titulo_asc">Título (A-Z)</string>
+    <string name="orden_titulo_desc">Título (Z-A)</string>
+    <string name="orden_mejor_calificados">Mejor calificados</string>
+    <string name="lista_vacia">No se encontraron recursos</string>
+    <string name="toolbar_subtitulo">%1$s · %2$s</string>
+    <string name="item_id">ID: %1$s</string>
+    <string name="item_promedio">★ %1$.1f (%2$d)</string>
+    <string name="item_sin_calificaciones">Sin calificaciones</string>
+    <string name="btn_abrir_recurso">Abrir recurso</string>
+    <string name="error_abrir_enlace">No se pudo abrir el enlace</string>
+    <string name="menu_logout">Cerrar sesión</string>
+    <string name="dialog_logout_titulo">Cerrar sesión</string>
+    <string name="dialog_logout_mensaje">¿Seguro que deseas salir?</string>
+    <string name="btn_si">Sí</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="msg_sesion_cerrada">Sesión cerrada</string>
 </resources>
