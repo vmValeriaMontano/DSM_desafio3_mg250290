@@ -140,6 +140,7 @@ class MainActivity : AppCompatActivity() {
                     todos = r.recursos
                     construirChips()
                     aplicarFiltros()
+                    binding.rvRecursos.scheduleLayoutAnimation()
                 }
                 is ResultadoRecursos.Error ->
                     Toast.makeText(this@MainActivity, r.mensajeRes, Toast.LENGTH_LONG).show()
@@ -187,6 +188,9 @@ class MainActivity : AppCompatActivity() {
             if (soloFavoritos) favoritos.ids() else null
         )
         adapter.submitList(resultado)
+        binding.tvVacio.setText(
+            if (soloFavoritos) R.string.lista_vacia_favoritos else R.string.lista_vacia
+        )
         binding.tvVacio.visibility = if (resultado.isEmpty()) View.VISIBLE else View.GONE
     }
 

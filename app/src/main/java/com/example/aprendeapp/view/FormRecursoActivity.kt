@@ -81,8 +81,12 @@ class FormRecursoActivity : AppCompatActivity() {
 
         mostrarCarga(true)
         lifecycleScope.launch {
-            val resultado = if (original?.id == null) controller.crear(recurso)
-            else controller.actualizar(original.id, recurso)
+            val idOriginal = original?.id
+            val resultado = if (idOriginal == null) {
+                controller.crear(recurso)
+            } else {
+                controller.actualizar(idOriginal, recurso)
+            }
 
             when (resultado) {
                 is Resultado.Exito -> {
@@ -101,6 +105,7 @@ class FormRecursoActivity : AppCompatActivity() {
                 }
             }
         }
+
     }
 
     private fun mostrarCarga(visible: Boolean) {

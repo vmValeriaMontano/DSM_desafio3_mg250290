@@ -97,4 +97,7 @@
 
     <!-- Accesibilidad -->
     <string name="item_favorito_desc">Marcar como favorito</string>
+
+    <!--Si no hay fav-->
+    <string name="lista_vacia_favoritos">Aún no tienes favoritos. Toca la estrella en un recurso para guardarlo</string>
 </resources>
