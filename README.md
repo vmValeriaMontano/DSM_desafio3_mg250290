@@ -1,6 +1,7 @@
 # AprendeApp
 
 - **Autor:** Valeria del Rosario Montano Gonzalez -MG250290
+- **Video** https://youtu.be/4p2SLyYCVKw?si=oOBrJvPSaVoI6RU7
 
 ## Funcionalidades
 
