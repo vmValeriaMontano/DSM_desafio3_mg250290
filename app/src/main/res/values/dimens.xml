@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Márgenes y Padding de Contenedores -->
+    <dimen name="padding_screen_large">24dp</dimen>
+    <dimen name="padding_screen_medium">16dp</dimen>
+    <dimen name="padding_screen_small">12dp</dimen>
+    <dimen name="padding_screen_tiny">8dp</dimen>
+
+    <!-- Espaciado entre elementos -->
+    <dimen name="margin_item_vertical">12dp</dimen>
+    <dimen name="margin_item_small">8dp</dimen>
+    <dimen name="margin_item_large">24dp</dimen>
+    <dimen name="margin_item_xlarge">32dp</dimen>
+    <dimen name="margin_horizontal">12dp</dimen>
+
+    <!-- Componentes de UI -->
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="image_card_height">180dp</dimen>
+    <dimen name="icon_button_size">48dp</dimen>
+    <dimen name="scroll_min_height">600dp</dimen>
+
+    <!-- Márgenes para evitar solapamiento con la navegación inferior/superiores -->
+    <dimen name="nav_safe_padding_bottom">32dp</dimen>
+    <dimen name="recycler_padding_bottom">24dp</dimen>
+</resources>

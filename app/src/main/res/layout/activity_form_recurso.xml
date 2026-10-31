@@ -3,15 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:fitsSystemWindows="true">
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:titleTextColor="?attr/colorOnPrimary" />
+        android:background="@color/primary"
+        app:titleTextColor="@color/on_primary" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,19 +23,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:padding="@dimen/padding_screen_large"
+            android:paddingBottom="@dimen/nav_safe_padding_bottom">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilTitulo"
                 style="?attr/textInputOutlinedStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_titulo">
+                android:hint="@string/hint_titulo"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etTitulo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textCapSentences" />
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/text_primary" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -42,15 +48,19 @@
                 style="?attr/textInputOutlinedStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:hint="@string/hint_descripcion">
+                android:layout_marginTop="@dimen/margin_item_vertical"
+                android:hint="@string/hint_descripcion"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etDescripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="top"
                     android:inputType="textMultiLine|textCapSentences"
                     android:minLines="3"
-                    android:gravity="top" />
+                    android:textColor="@color/text_primary" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -58,13 +68,17 @@
                 style="?attr/textInputOutlinedExposedDropdownMenuStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:hint="@string/hint_tipo">
+                android:layout_marginTop="@dimen/margin_item_vertical"
+                android:hint="@string/hint_tipo"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
                 <com.google.android.material.textfield.MaterialAutoCompleteTextView
                     android:id="@+id/acTipo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColor="@color/text_primary" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -72,13 +86,17 @@
                 style="?attr/textInputOutlinedStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:hint="@string/hint_enlace">
+                android:layout_marginTop="@dimen/margin_item_vertical"
+                android:hint="@string/hint_enlace"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etEnlace"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textUri" />
+                    android:inputType="textUri"
+                    android:textColor="@color/text_primary" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -86,30 +104,37 @@
                 style="?attr/textInputOutlinedStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:hint="@string/hint_imagen">
+                android:layout_marginTop="@dimen/margin_item_vertical"
+                android:hint="@string/hint_imagen"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etImagen"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textUri" />
+                    android:inputType="textUri"
+                    android:textColor="@color/text_primary" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnGuardar"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="24dp"
-                android:text="@string/btn_guardar" />
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/margin_item_large"
+                android:backgroundTint="@color/primary"
+                android:text="@string/btn_guardar"
+                android:textColor="@color/on_primary" />
 
             <com.google.android.material.progressindicator.CircularProgressIndicator
                 android:id="@+id/progress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/padding_screen_medium"
                 android:indeterminate="true"
-                android:visibility="gone" />
+                android:visibility="gone"
+                app:indicatorColor="@color/flor_cerezo" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

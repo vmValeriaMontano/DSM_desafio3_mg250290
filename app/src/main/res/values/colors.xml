@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Paleta: Delicia de Melocotón -->
+    <color name="gris_alabastro">#D8E2DC</color>
+    <color name="petalo_polvo">#FFE5D9</color>
+    <color name="rosa_pastel">#FFCAD4</color>
+    <color name="flor_cerezo">#F4ACB7</color>
+    <color name="malva_empolvado">#9D8189</color>
+
+    <!-- Asignaciones UI -->
+    <color name="primary">#9D8189</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#FFCAD4</color>
+    <color name="on_primary_container">#9D8189</color>
+    <color name="background">#FFE5D9</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_primary">#9D8189</color>
+    <color name="text_secondary">#F4ACB7</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_stroke">#D8E2DC</color>
 </resources>

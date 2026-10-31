@@ -4,8 +4,13 @@
     style="?attr/materialCardViewElevatedStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="12dp"
-    android:layout_marginVertical="6dp">
+    android:layout_marginHorizontal="@dimen/margin_horizontal"
+    android:layout_marginVertical="6dp"
+    app:cardBackgroundColor="@color/card_background"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:strokeColor="@color/card_stroke"
+    app:strokeWidth="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,21 +20,23 @@
         <ImageView
             android:id="@+id/ivImagen"
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:scaleType="centerCrop"
-            android:importantForAccessibility="no" />
+            android:layout_height="@dimen/image_card_height"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/padding_screen_medium">
 
             <TextView
                 android:id="@+id/tvTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?attr/textAppearanceTitleMedium" />
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -42,21 +49,27 @@
                     android:id="@+id/chipTipo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:clickable="false" />
+                    android:clickable="false"
+                    android:textColor="@color/on_primary_container"
+                    app:chipBackgroundColor="@color/primary_container"
+                    app:chipStrokeWidth="0dp" />
 
                 <TextView
                     android:id="@+id/tvId"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_item_vertical"
                     android:layout_weight="1"
-                    android:layout_marginStart="12dp"
-                    android:textAppearance="?attr/textAppearanceBodySmall" />
+                    android:textAppearance="?attr/textAppearanceBodySmall"
+                    android:textColor="@color/malva_empolvado" />
 
                 <TextView
                     android:id="@+id/tvPromedio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?attr/textAppearanceLabelLarge" />
+                    android:textAppearance="?attr/textAppearanceLabelLarge"
+                    android:textColor="@color/primary"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -64,16 +77,17 @@
                 android:id="@+id/tvDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:maxLines="2"
+                android:layout_marginTop="@dimen/margin_item_small"
                 android:ellipsize="end"
-                android:textAppearance="?attr/textAppearanceBodyMedium" />
+                android:maxLines="2"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="@color/text_primary" />
 
-            <!-- NUEVO BLOQUE DE ACCIONES (REEMPLAZÓ A BTNABRIR EN SOLITARIO) -->
+            <!-- BLOQUE DE ACCIONES -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/margin_item_vertical"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -82,7 +96,9 @@
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/btn_abrir_recurso" />
+                    android:text="@string/btn_abrir_recurso"
+                    android:textColor="@color/primary"
+                    app:strokeColor="@color/primary" />
 
                 <Space
                     android:layout_width="0dp"
@@ -92,9 +108,10 @@
                 <ImageButton
                     android:id="@+id/btnFavorito"
                     style="?attr/borderlessButtonStyle"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:contentDescription="@string/item_favorito_desc" />
+                    android:layout_width="@dimen/icon_button_size"
+                    android:layout_height="@dimen/icon_button_size"
+                    android:contentDescription="@string/item_favorito_desc"
+                    app:tint="@color/primary" />
 
             </LinearLayout>
 
@@ -109,21 +126,24 @@
                     style="?attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/btn_calificar" />
+                    android:text="@string/btn_calificar"
+                    android:textColor="@color/primary" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnEditar"
                     style="?attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/btn_editar" />
+                    android:text="@string/btn_editar"
+                    android:textColor="@color/primary" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnEliminar"
                     style="?attr/borderlessButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/btn_eliminar" />
+                    android:text="@string/btn_eliminar"
+                    android:textColor="@color/flor_cerezo" />
 
             </LinearLayout>
 

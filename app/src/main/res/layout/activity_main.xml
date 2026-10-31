@@ -3,63 +3,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/primary"
+        app:subtitleTextColor="@color/on_primary"
         app:title="@string/app_name"
-        app:titleTextColor="?attr/colorOnPrimary"
-        app:subtitleTextColor="?attr/colorOnPrimary" />
+        app:titleTextColor="@color/on_primary" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilBuscar"
         style="?attr/textInputOutlinedStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="12dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="@dimen/margin_horizontal"
+        android:layout_marginTop="@dimen/margin_item_vertical"
         android:hint="@string/hint_buscar"
+        app:boxStrokeColor="@color/primary"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/primary"
+        app:hintTextColor="@color/primary"
         app:startIconDrawable="@android:drawable/ic_menu_search"
-        app:endIconMode="clear_text">
+        app:startIconTint="@color/primary">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etBuscar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
             android:imeOptions="actionSearch"
-            android:maxLines="1" />
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/text_primary" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         style="?attr/textInputOutlinedExposedDropdownMenuStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="12dp"
-        android:layout_marginTop="8dp"
-        android:hint="@string/hint_ordenar">
+        android:layout_marginHorizontal="@dimen/margin_horizontal"
+        android:layout_marginTop="@dimen/margin_item_small"
+        android:hint="@string/hint_ordenar"
+        app:boxStrokeColor="@color/primary"
+        app:hintTextColor="@color/primary">
+
         <com.google.android.material.textfield.MaterialAutoCompleteTextView
             android:id="@+id/acOrden"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none" />
+            android:inputType="none"
+            android:textColor="@color/text_primary" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="none"
-        android:layout_marginTop="4dp">
+        android:layout_marginTop="4dp"
+        android:scrollbars="none">
+
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroupTipos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="12dp"
+            android:paddingHorizontal="@dimen/margin_horizontal"
+            app:selectionRequired="true"
             app:singleLine="true"
-            app:singleSelection="true"
-            app:selectionRequired="true" />
+            app:singleSelection="true" />
     </HorizontalScrollView>
 
     <FrameLayout
@@ -77,8 +90,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
+                android:layoutAnimation="@anim/layout_fall_down"
                 android:paddingVertical="6dp"
-                android:layoutAnimation="@anim/layout_fall_down" />
+                android:paddingBottom="@dimen/recycler_padding_bottom" />
 
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
@@ -88,6 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/lista_vacia"
+            android:textColor="@color/text_secondary"
             android:visibility="gone" />
 
         <com.google.android.material.progressindicator.CircularProgressIndicator
@@ -96,6 +111,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:indeterminate="true"
-            android:visibility="gone" />
+            android:visibility="gone"
+            app:indicatorColor="@color/flor_cerezo" />
     </FrameLayout>
 </LinearLayout>
