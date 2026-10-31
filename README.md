@@ -2,6 +2,7 @@
 
 - **Autor:** Valeria del Rosario Montano Gonzalez -MG250290
 - **Video** https://youtu.be/4p2SLyYCVKw?si=oOBrJvPSaVoI6RU7
+- **API** https://6ae362f1933120ae20f8bad3.mockapi.io/recursos
 
 ## Funcionalidades
 
